@@ -93,7 +93,7 @@ console.log(typeof x, x);
         * 'Cat'에서 값이 true로 확정되므로 "Cat"를 반환한다.
    * if문 대체
      ```jsx
-     let done = true;
+     let done = true;//true일 때 작동
      let message = '';
      
      message = done && '완료';
@@ -101,7 +101,7 @@ console.log(typeof x, x);
      //done이 false면 첫번째 메시지에서 결과가 확정되므로 false가 출력된다.
      ```
      ```jsx
-     let done = 'false';
+     let done = 'false';//false일 때 작동
      let message = '';
 
      message = done || '미완료';//done이 true면 두번째 메시지에서 결과가 확정되므로 '미완료'를 출력된다.
@@ -113,3 +113,4 @@ console.log(typeof x, x);
 
      message = done ? '완료' : '미완료';//done이 true면 '완료', false면 '미완료' 출력
      console.log(message);
+  * 객
