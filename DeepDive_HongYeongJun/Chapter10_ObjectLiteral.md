@@ -95,12 +95,24 @@ let counter = {
         ```
         ```jsx
         //ES6
-        const prefix = 'prop';
-        let i = 0;
+        var prefix = 'prop';//const로 선언하면 이미 선언됐다는 오류 발생
+        var i = 0;
 
-        const obj = {//객체 리터럴 내부에서 계산된 프로퍼티 이름으로 프로퍼티 키 동적 생성
+        var obj = {//객체 리터럴 내부에서 계산된 프로퍼티 이름으로 프로퍼티 키 동적 생성
           [`${prefix}-${++i}`]: i,
           [`${prefix}-${++i}`]: i,
           [`${prefix}-${++i}`]: i
         };
         console.log(obj);
+        ```
+      * 메서드 축약 표현
+      ```jsx
+      var obj = {//const로 치면 오류 발생
+        name: 'Lee',
+        sayHi/*function 생략 가능*/(){
+          console.log('Hi ' + this.name);
+        }
+      };
+      obj.sayHi();
+      ```
+    
