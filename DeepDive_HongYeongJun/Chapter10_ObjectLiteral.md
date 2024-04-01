@@ -1,14 +1,14 @@
 ## 1. 객체란?
 * 다양한 타입의 값을 가진 자료구조
 * 객체 타입의 값은 변경 가능하다(mutable)
-* ```jsx
+```jsx
   var person = {
     name: 'Lee',//왼쪽부터 프로퍼티 키와 프로퍼티 값이다. 
     age: 20
   };
 ```
 * 함수도 프로퍼티 값이 된다. 이러한 함수는 method라고 한다.
-* ```jsx
+```jsx
 let counter = {
   num: 0,
   increase: function (){
@@ -17,7 +17,7 @@ let counter = {
 };
 ```
 ## 2. 객체 리터럴
-* ```jsx
+```jsx
   let person = {
     name: 'Lee',
     sayHello: function () {
