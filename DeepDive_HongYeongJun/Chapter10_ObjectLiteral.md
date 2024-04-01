@@ -57,4 +57,50 @@ let counter = {
       console.log(person['age-Lee'];
       ```
       ## 5. 프로퍼티 값 갱신
-      
+      ```jsx
+      let person = {
+        name: 'Lee'
+      };
+
+      person.name = 'Kim';
+      console.log(person);//값이 Kim으로 갱신된다.
+      ```
+      ## 6. 프로퍼티 동적 생성과 삭제
+      ```jsx
+      let person = {
+        name: 'Lee'
+      };
+
+      person.age = 20;//age 프로퍼티가 존재하지 않았으므로 age 프로퍼티가 자동으로 생성된다.
+      delete person.age;
+      ```
+      ## 7. ES6 추가 기능
+      * 프로퍼티 축약 표현
+        ```jsx
+        let x = 1, y = 2;
+        const obj = {x, y};//변수 이름과 프로퍼티 키가 같을 때 사용 가능
+        console.log(obj)l
+        ```
+      * 계산된 프로퍼티 이름
+        ```jsx
+        //ES5
+        var prefix = 'prop';
+        var i = 0;
+        var obj = {};
+
+        obj[prefix + '-' + ++i] = i;
+        obj[prefix + '-' + ++i] = i;
+        obj[prefix + '-' + ++i] = i;
+        console.log(obj);
+        ```
+        ```jsx
+        //ES6
+        const prefix = 'prop';
+        let i = 0;
+
+        const obj = {//객체 리터럴 내부에서 계산된 프로퍼티 이름으로 프로퍼티 키 동적 생성
+          [`${prefix}-${++i}`]: i,
+          [`${prefix}-${++i}`]: i,
+          [`${prefix}-${++i}`]: i
+        };
+        console.log(obj);
