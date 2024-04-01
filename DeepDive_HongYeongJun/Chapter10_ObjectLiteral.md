@@ -24,8 +24,9 @@ let counter = {
       console.log(`Hello! My name is ${this.name}.`);
     }
 };
+```
 * 프로퍼티는 객체 생성 이후에 동적으로 추가할 수도 있다.
-  ## 3. 프로퍼티
+## 3. 프로퍼티
   * 프로퍼티를 나열할 때는 쉼표로 구분한다.
   * 식별자 네이밍 규칙을 따르는 프로퍼티 키는 ""를 안 써도 된다.
     ```jsx
@@ -44,7 +45,7 @@ let counter = {
     ```
     * 이미 존재하는 프로퍼티 키를 중복선언하면 나중에 선언한 프로퍼티가 먼저 선언한 프로퍼티를 덮어쓴다.
       **주의: 에러가 발생하지 않는다. **
-    ## 4. 프로퍼티 접근
+## 4. 프로퍼티 접근
     * ```jsx
       let person = {
         name: 'Lee'
@@ -56,7 +57,7 @@ let counter = {
       console.log(person['name']);//대괄호 표기법은 따옴표 필수
       console.log(person['age-Lee'];
       ```
-      ## 5. 프로퍼티 값 갱신
+  ## 5. 프로퍼티 값 갱신
       ```jsx
       let person = {
         name: 'Lee'
@@ -65,7 +66,7 @@ let counter = {
       person.name = 'Kim';
       console.log(person);//값이 Kim으로 갱신된다.
       ```
-      ## 6. 프로퍼티 동적 생성과 삭제
+  ## 6. 프로퍼티 동적 생성과 삭제
       ```jsx
       let person = {
         name: 'Lee'
@@ -74,7 +75,7 @@ let counter = {
       person.age = 20;//age 프로퍼티가 존재하지 않았으므로 age 프로퍼티가 자동으로 생성된다.
       delete person.age;
       ```
-      ## 7. ES6 추가 기능
+  ## 7. ES6 추가 기능
       * 프로퍼티 축약 표현
         ```jsx
         let x = 1, y = 2;
