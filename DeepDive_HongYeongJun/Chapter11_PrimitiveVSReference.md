@@ -78,6 +78,8 @@ console.log(person); //{name: "Kim", address: "Seoul"}
 
 ## 5. Call by Reference
 
+-   참조값을 가리키는 변수를 다른 변수에 할당하면 그 참조값이 할당되는 변수에 전달된다. \*근데 그 참조값이 결국 같은 객체를 가리키므로 두 변수 중 한 곳에서 값을 변경하면 다른 쪽 변수에도 영향을 미친다.
+
 ```jsx
 let person = {
     name: "Lee",
@@ -87,3 +89,14 @@ let copy = person; //person에 저장된 주소가 copy로 복사된다. 따라�
 ```
 
 ![alt text](Images/image-2.png)
+
+```jsx
+let person = {
+    name: "Lee",
+};
+
+let copy = person;
+copy.name = "Kim";
+
+console.log(person); //{name: "Kim, address: "Seoul}
+```
