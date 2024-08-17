@@ -30,4 +30,60 @@
 
 -   메모리 낭비
 
-### 3.
+### 3.스코프 체인 상에서 종점에 존재->검색에 시간이 오래 걸림
+
+### 4. 네임스페이스 오염
+
+-   JS의 전역 변수는 파일이 다르더라도 같은 전역 스코프를 공유하므로 네임스페이스 오염에 취약하다.
+
+## 3. 전역 변수 사용을 억제하는 방법
+
+### 1. 즉시 실행 함수
+
+```javascript
+(function () {
+    var foo = 10;
+    // do something
+})();
+
+console.log(foo);
+```
+
+### 2. 네임스페이스 객체
+
+```javascript
+const MyApp = {
+    name: "Aatrox",
+    address: "???",
+};
+
+console.log(MyApp.name);
+```
+
+\*네임스페이스 객체도 결국 전역 변수에 할당되므로 네임스페이스 오염 방지 외의 효과를 기대할 수 없다.
+
+### 3. 모듈 패턴
+
+```javascript
+let Counter = (function (){
+    //private 변수
+    let num = 0;
+
+    return {
+        increase(){
+            return num++;
+        }
+        decrease(){
+            return --num;
+        }
+    };
+}())
+
+console.log(Counter.num);//undefined가 나온다.
+```
+
+(24장 연결 필요)
+
+### 4. ES6 모듈
+
+(48장, 49장 연결 필요)
